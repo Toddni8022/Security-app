@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weird Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: #c0c0c0;
+            font-family: 'Comic Sans MS';
+            font-size: 50px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .crazy {
+            position: relative;
+            animation: wiggle 1s infinite;
+        }
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="crazy">🌀 Welcome to the Weird Page! 🤪</div>
+    <script>
+        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF'];
+        setInterval(() => {
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }, 1000);
+    </script>
+</body>
+</html>
