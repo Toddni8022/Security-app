@@ -1,0 +1,95 @@
+{
+  "scan_time": "2026-02-18T19:19:29.081025",
+  "score": 68,
+  "critical": [],
+  "high": [
+    {
+      "severity": "HIGH",
+      "category": "Network",
+      "title": "Port 445 is open",
+      "detail": "SMB (common ransomware vector)"
+    },
+    {
+      "severity": "HIGH",
+      "category": "Passwords",
+      "title": "Minimum password length is too short",
+      "detail": "Minimum length is 0 (recommended: 12+)"
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "MEDIUM",
+      "category": "Encryption",
+      "title": "Could not determine BitLocker status",
+      "detail": "Run as Administrator for full results"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Network",
+      "title": "Port 135 is open",
+      "detail": "RPC (common attack target)"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Network",
+      "title": "Port 139 is open",
+      "detail": "NetBIOS (SMB file sharing)"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "AutoRun",
+      "title": "AutoRun may be enabled",
+      "detail": "AutoRun can allow malware to execute from USB drives automatically"
+    }
+  ],
+  "passed": [
+    {
+      "severity": "PASS",
+      "category": "Antivirus",
+      "title": "Real-time protection enabled",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "Firewall",
+      "title": "Domain firewall is enabled",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "Firewall",
+      "title": "Private firewall is enabled",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "Firewall",
+      "title": "Public firewall is enabled",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "UAC",
+      "title": "UAC is enabled",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "Passwords",
+      "title": "Account lockout is configured",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "Accounts",
+      "title": "Guest account is disabled",
+      "detail": ""
+    },
+    {
+      "severity": "PASS",
+      "category": "Startup",
+      "title": "No suspicious startup paths detected",
+      "detail": ""
+    }
+  ]
+}
