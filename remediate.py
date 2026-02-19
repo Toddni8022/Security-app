@@ -265,7 +265,7 @@ class Remediator:
             self.failed.append("Scanner date patch")
             return
 
-        content = scanner_path.read_text()
+        content = scanner_path.read_text(encoding="utf-8")
 
         old_block = '''                if installed_on and installed_on != "Unknown":
                         try:
@@ -295,7 +295,7 @@ class Remediator:
 
         if old_block in content:
             new_content = content.replace(old_block, new_block)
-            scanner_path.write_text(new_content)
+            scanner_path.write_text(new_content, encoding="utf-8")
             ok("security_scan.py patched — date parsing now handles PowerShell formats")
             self.applied.append("Scanner date patch")
             self._record("applied", "Patched date parsing in security_scan.py")
@@ -325,8 +325,8 @@ class Remediator:
                         sig_date = datetime.strptime(_sig_raw[:10], "%Y-%m-%d")'''
 
         if old_sig in content:
-            updated = scanner_path.read_text().replace(old_sig, new_sig)
-            scanner_path.write_text(updated)
+            updated = scanner_path.read_text(encoding="utf-8").replace(old_sig, new_sig)
+            scanner_path.write_text(updated, encoding="utf-8")
             ok("security_scan.py patched — signature date parsing improved")
         else:
             info("Signature date block not found (may already be patched)")
